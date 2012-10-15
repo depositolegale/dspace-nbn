@@ -10,9 +10,9 @@ e poi procedere con le procedure di default per l'aggiornamento di DSpace (mvn p
 
 Il plugin è stato sviluppato per la JSPUI di Dspace 1.8.x
 
-
 Credenziali
 -----------
 Le credenziali di autenticazione al webservice, [ottenute](http://www.depositolegale.it/nbn-flusso-di-lavoro/) in seguito all'adesione al servizio, vanno inserite nel file di configurazione
 dspace/config/modules/identifier.cfg
+
 
