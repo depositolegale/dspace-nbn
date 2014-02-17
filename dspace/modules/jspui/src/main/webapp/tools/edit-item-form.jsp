@@ -352,23 +352,7 @@
 
 
 
-<!-- NBN-plugin added code : START -->
-<% 
 
-if ( handle != null) {
-%>
-          <tr>
-     <td class="submitFormLabel">NBN:</td>
-
-          <td class="standard">
-                    <a target="_blank" href="nbn.jsp?handle=<%= handle %>&item_id=<%= item.getID() %> ">ADD</a>
-
-
-                </td>
-            </tr>
-<% } %>
-
-<!-- NBN-plugin added code : END -->
 
 <%
 
@@ -408,7 +392,20 @@ if ( handle != null) {
 					<%
 						}
 					%>
-    	    </div>
+    	    
+
+<!-- NBN-plugin added code : START -->
+<% if ( handle != null) {  %>
+ <form method="post" action="<%= request.getContextPath() %>/tools/nbn.jsp">
+                        <input type="hidden" name="handle" value="<%= handle %>" />
+                        <input type="hidden" name="item_id" value="<%= item.getID() %>" />
+                        <input class="btn btn-default col-md-12" type="submit" name="submit" value="Add NBN:IT"/>
+                    </form>
+<% } %>
+<!-- NBN-plugin added code : END -->
+
+
+          </div>
         </div>
 	</div>
     </div>
